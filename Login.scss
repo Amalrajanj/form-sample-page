@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+$font-style :'Inter',
+sans-serif;
+
+@mixin flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-style;
+}
+
+.login-main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flexcenter();
+
+    .login-container {
+        width: 90%;
+        max-width: 500px;
+        min-height: 200px;
+        padding: 2% 4%;
+        background-color: rgba(255, 255, 255, 0.666);
+        border-radius: 10px;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+
+        .login-container-title {
+            font-weight: 800;
+            margin: 1rem 0 2rem 0;
+        }
+
+        form {
+            width: 100%;
+
+
+            input {
+                width: 100%;
+                outline: none;
+                border: 3px #6CD5D0 solid;
+                border-radius: 10px;
+                margin: .8rem auto;
+                padding: .7rem .8rem;
+
+                font-weight: 800;
+                letter-spacing: 1px;
+            }
+
+            .form-action-container {
+                margin: 1rem 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                span {
+                    @include flexcenter();
+                    font-weight: 800;
+
+
+
+                    a {
+                        margin: 0 .2rem;
+                        color: #6CD5D0;
+                        cursor: pointer;
+                    }
+                }
+
+                button {
+                    outline: none;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #6CD5D0;
+                    padding: .3rem .5rem;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                    font-size: 1.1rem;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+}
